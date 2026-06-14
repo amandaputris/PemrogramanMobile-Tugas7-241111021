@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="20dp">
+
+    <!-- Skip Button -->
+    <TextView
+        android:id="@+id/tv_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/skip"
+        android:textColor="@color/text_light"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp" />
+
+    <!-- Content Spacer -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
+
+    <!-- Meal Type Badge -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/badge_background"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp"
+        android:gravity="center_vertical">
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@color/primary_green"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/tv_meal_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/breakfast"
+            android:textColor="@color/text_light"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Meal Title -->
+    <TextView
+        android:id="@+id/tv_meal_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/oatmeal_bowl"
+        android:textColor="@color/text_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Illustration Placeholder -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_marginVertical="16dp">
+
+        <!-- Circle Background -->
+        <View
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/circle_background"
+            android:layout_gravity="center" />
+
+        <!-- Main Image Placeholder (Replace with actual image) -->
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:background="@drawable/meal_illustration"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="🍲"
+            android:textSize="80sp" />
+
+        <!-- Protein Badge -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/protein"
+                    android:textColor="@color/text_light"
+                    android:textSize="11sp"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/protein_value"
+                    android:textColor="@color/primary_green"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+    <!-- Bottom Content Spacer -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_screen_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/track_calories_title"
+        android:textColor="@color/text_dark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/tv_screen_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/track_calories_desc"
+        android:textColor="@color/text_light"
+        android:textSize="14sp"
+        android:lineSpacingMultiplier="1.4"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Indicator Dots and Button Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Dots Indicator -->
+        <LinearLayout
+            android:id="@+id/dots_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <View
+                android:id="@+id/dot_1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/dot_active"
+                android:layout_marginHorizontal="4dp" />
+
+            <View
+                android:id="@+id/dot_2"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/dot_inactive"
+                android:layout_marginHorizontal="4dp" />
+
+            <View
+                android:id="@+id/dot_3"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/dot_inactive"
+                android:layout_marginHorizontal="4dp" />
+        </LinearLayout>
+
+        <!-- Next Button -->
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/btn_rounded_green" />
+    </LinearLayout>
+
+</LinearLayout>
+

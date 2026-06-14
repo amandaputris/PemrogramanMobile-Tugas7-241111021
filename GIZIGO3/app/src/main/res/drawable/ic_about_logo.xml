@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Rounded Background -->
+    <path
+        android:fillColor="#065F46"
+        android:pathData="M16,0 L84,0 A16,16 0 0 1 100,16 L100,84 A16,16 0 0 1 84,100 L16,100 A16,16 0 0 1 0,84 L0,16 A16,16 0 0 1 16,0 z" />
+
+    <!-- Phone Shape -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,25 L65,25 A5,5 0 0 1 70,30 L70,70 A5,5 0 0 1 65,75 L35,75 A5,5 0 0 1 30,70 L30,30 A5,5 0 0 1 35,25 z" />
+
+    <!-- Leaf Icon Inside -->
+    <path
+        android:fillColor="#065F46"
+        android:pathData="M50,40 C55,40 60,45 60,50 C60,55 55,60 50,60 C45,60 40,55 40,50 C40,45 45,40 50,40 Z" />
+</vector>
